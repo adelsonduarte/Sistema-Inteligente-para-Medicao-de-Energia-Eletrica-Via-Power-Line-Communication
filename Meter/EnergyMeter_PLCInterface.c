@@ -1,10 +1,10 @@
-/* Medidor monofásico com interface PLC
+/* Medidor monofÃ¡sico com interface PLC
  * Autor: Adelson Duarte dos Santos
- * Data da documentação 15/03/2018
+ * Data da documentaÃ§Ã£o 15/03/2018
  *
  * --------------------------------------------------------------
  *
- * Ganho ajustável (Foi testado o algoritmo soldando resistores diferentes, porém o teste com a chave acontecerá na versão V2 de hardware)
+ * Ganho ajustÃ¡vel (Foi testado o algoritmo soldando resistores diferentes, porÃ©m o teste com a chave acontecerÃ¡ na versÃ£o V2 de hardware)
  *      //  Gain_2  |   Gain_1  |   R   |           |  Ganho        R1 = 470
  *      //   0            0        470    R             2.6         R2 = 150
  *      //   0            1        235  (R//R1)         4.2
@@ -13,12 +13,10 @@
  *
  * -----------------------------------------------------------------
  *
- * Varredura de frequência para comunicação (Testado e funcionando)
- * Relação de frequência varridas está em: \Dropbox\Mestrado UNICAMP\Variação de frequência PWM.xlsx
  *
  * -----------------------------------------------------------------
  *
- * Parâmetros
+ * ParÃ¢metros
  *
  *  1 - Clock
  *  MCLK = SMCLK/2 = 10.855MHz
@@ -32,9 +30,9 @@
  *  Vrms entrada AD = 50mV
  *  SD24GAINx = 4
  *
- *  b - Ganho de Tensão
+ *  b - Ganho de TensÃ£o
  *  VRMS max 120V, VPico = 170V
- *  Divisor de tensão = 0.001512859
+ *  Divisor de tensÃ£o = 0.001512859
  *  Vp entrada AD max = 181mV
  *  Vrms entrada AD max = 257mV
  *  SD24GAINx = 2
@@ -43,7 +41,7 @@
  *  Canal 0: V
  *  Canal 1: I
  *
- *  d - Configuração
+ *  d - ConfiguraÃ§Ã£o
  *  Frequency AD = 1.809MHz
  *  OSR = 512
  *  Fsampling = 3540 Samples/s
@@ -197,7 +195,7 @@ void UART_init()
 
 void sd_init()
 {
-    //Frequência de amostragem  =
+    //FrequÃªncia de amostragem  =
     volatile unsigned int j;
 
 //    SD24CTL |= SD24XDIV_1 | SD24DIV_2 | SD24SSEL_1 | SD24REFON;     // clock divider = 12 |  clock source select = 1 | Reference generator on = 1
